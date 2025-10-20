@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Лидерборд (слайдер)</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chessforum</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Город Омск!</h1>
-  <h2>"Осенний забег 2025"</h2>
-  <div class="slider">
-    <div id="slider-content"></div>
+    <div class="header">
+        <div class="img_logo">
+            <img src="image/logo.png" alt="" width="120px">
+        </div>
+        <div>
+            <div>
+                <p id="poz_head">chess</p>
+                <p id="poz_head2">forum</p>
+            </div>
+        </div>
+        <div class="header_flex_right_side">
+            <span id="hvr_header">Главная</span>
+            <span id="hvr_header">О нас</span>
+            <span id="hvr_header">Войти</span>
+        </div>
+    </div>
+    <section>
+        <div>
+            <img src="image/he.jpg" alt="" width="100%">
+        </div>
+    </section>
+    <main>
+        <div id="add_post"></div>
+        <div id="add_container"></div>
 
-    <button class="nav prev">‹</button>
-    <button class="nav next">›</button>
-  </div>
-
-  <script src="script.js"></script>
+        <div class="jst_text_main" id="jst_text">Здесь пока нет постов...</div>
+        <div class="jst_buttonCreate_main">
+            <button id="btn_add">Создать пост</button>
+        </div>
+    </main>
+    <footer></footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
