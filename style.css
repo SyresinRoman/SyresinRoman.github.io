@@ -1,152 +1,162 @@
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  /* background: #0b1020; */
-  color: #fff;
-  flex-direction: column;
-  gap: 10px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background:no-repeat  url(https://tse4.mm.bing.net/th/id/OIP.MJUDnTcV9lpQ6jpLQa3yRAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3);
-  background-size: 500%;
-  padding-top: 10%;
+    margin: 0;
+    padding: 0;
 }
 
-.slider {
-  position: relative;
-  width: 80%;
-  max-width: 900px;
-  overflow: hidden;
-  border-radius: 20px;
-  height: 2000px;
+.header {
+    display: flex;
+    width: 100%;
+    height: 75px; 
+    background-color: gray;
 }
 
-.slider table {
-  width: 100%;
-  border-collapse: collapse;
-  /* background: rgba(20,30,60,0.9); */
+.img_logo {
+    position: relative;
+    left: -1%;
+    display: flex;
+    align-items: center;
 }
 
-.slider th, .slider td {
-  /* border: 1px solid #446; */
-  padding: 8px 12px;
-  text-align: center;
+#poz {
+    position: absolute;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red; 
+    /* bottom: 350px; */
+    left: 30%;
+    width: 50px;
+    font-size: 70px;
 }
 
-.slider th {
-  background: rgb(94, 94, 255);
-  font-size: 1.1em;
-
+#poz2 {
+    position: absolute;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    left: 60%;
+    width: 50px;
+    /* bottom: 350px; */
+    font-size: 70px;
 }
 
-.slider td {
-  background: #223;
-  font-size: 1em;
+#poz_head{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red; 
+    position: relative;
+    left: -75%;
+    top: 13px;
+    width: 50px;
+    font-size: 20px;
 }
 
-/* Анимация плавной смены */
-.slide {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+#poz_head2{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    position: relative;
+    top: 10px;
+    width: 50px;
+    font-size: 20px;
+    left: -75%;
 }
 
-.slide.active {
-  display: block;
-  opacity: 1;
+.header .header_flex_right_side {
+    /* min-width: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: 27px;
+    left: 70%;
+    gap: 30px;
+    min-width: 0;
+    flex-shrink: 1;  */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: 27px;
+    /* Заменяем left: 70% на более адаптивный подход */
+    margin-left: auto; /* Прижимает к правому краю */
+    margin-right: 40px; /* Отступ от края */
+    gap: 30px;
+    flex-shrink: 1;
+    min-width: 0;
+    height: 15px;
 }
 
-/* Кнопки навигации */
-.nav {
-  position: absolute;
-  top: 5%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border-radius: 20px;
-  color: white;
-  font-size: 2em;
-  padding: 10px;
-  cursor: pointer;
+#hvr_header {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav.prev {
-  left: 10px;
+#hvr_header::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff; /* или любой цвет, который хочешь */
+    transition: width 0.3s ease;
 }
 
-.nav.next {
-  right: 10px;
-}
-.leader-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(135deg, #223, #334);
-  /* border: 2px solid #446; */
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  max-width: 400px;
-  margin: 0 auto;
+#hvr_header:hover {
+    color: #fff; /* если нужно изменить цвет текста */
 }
 
-.leader-card h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #ffd700;
+#hvr_header:hover::after {
+    width: 100%;
 }
 
-.leader-card p {
-  margin: 5px 0;
-  font-size: 1.1em;
+footer {
+
+    width: 100%;
+    height: 75px; 
+    background-color: gray;
+    margin: 0;
 }
 
-.leader-card .score {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #0f0;
-}
-.slider {
-  position: relative;
-  width: 900px;
-  max-width: 900px;
-  overflow: hidden;
-  min-height: 250px; /* чтобы карточка и таблица не дергали слайдер */
+.jst_text_main {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-  pointer-events: none; /* чтобы скрытые слайды не мешали */
+main {
+    margin: 30px;
 }
 
-.slide.active {
-  opacity: 1;
-  pointer-events: auto;
+.jst_buttonCreate_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    bottom: 30px;
 }
 
-/* Кнопка паузы */
-.pause-btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border-radius: 20px;
-  padding: 8px 12px;
-  /* border-radius: 8px; */
-  cursor: pointer;
-  font-size: 1em;
+.jst_buttonCreate_main button {
+    border-radius: 100px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h2 {
-  margin-bottom: 5%;
+.jst_buttonCreate_main button:hover {
+    background-position: 100% 100%;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: left 0.5s ease 0.1s;
+    cursor: pointer;
 }
